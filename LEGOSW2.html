@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>LEGOSW2</title>
+    <style>
+        a:visited
+        {
+            color:#0000ee;
+        }    
+        a:hover
+        {
+            color:red;
+        }
+        code
+        {
+            background-color: #181a1b;
+            color: lime;
+        }
+        table, th, td
+        {
+            border: 1px solid black;
+            max-width: 750px;
+        }
+        .player
+        {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>LEGO Star Wars II: The Original Trilogy DS</h1>
+    <p>All information in this document is true for version USA 1.1 of the game (<code>LEGOSW2_AL7E64_01.nds</code>)</p>
+    <p>SHA1 checksum of ROM: <code>96aa30decea732eb03f7da01e489c6ce576536a5</code></p>
+    <h1>Addresses</h1>
+    <h2>Object Info</h2>
+    <p>Offsets in <span class="player">blue</span> are only known to apply specifically to the player and might not apply to other objects.</p>
+    <table style="width:50%">
+        <thead>
+            <tr>
+                <th>Offset</th>
+                <th>Size</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0x0</td>
+                <td>u32</td>
+                <td>
+                    The base.
+                    <br>
+                    Known base values:
+                    <ul>
+                        <li><code>0x020FBF48</code>&nbsp;(the player and party members)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>0x8</td>
+                <td>u32</td>
+                <td>
+                    The "visibility address". Editing its value makes objects invisible and/or intangible.
+                    <br>
+                    Known visibility values:
+                    <ul>
+                        <li><code>0x80100005</code>&nbsp;(e.g. <i>Escape from Echo Base</i> box puzzle forcefield, object <code>IDControl_C3P0</code>)</li>
+                        <li><code>0x801243A5</code>&nbsp;(the player and party members)</li>
+                        <li><code>0x80300001</code>&nbsp;(e.g. the current level)</li>
+                        <li><code>0x81100005</code>&nbsp;(e.g. object <code>DSCrate</code>, found in <i>Death Star Escape</i>)</li>
+                        <li><code>0x81100125</code>&nbsp;(e.g. object <code>Plug</code>, found in <i>Escape from Bespin</i>)</li>
+                        <li><code>0x829203A5</code>&nbsp;(e.g. object <code>Human_Model</code>)</li>
+                    </ul>            
+                </td>
+            </tr>
+            <tr class="player">
+                <td>0x40</td>
+                <td>u8</td>
+                <td>Airborne/Grounded state. 0 = airborne, 1 = grounded.</td>
+            </tr>
+            <tr class="player">
+                <td>0x60</td>
+                <td>s32</td>
+                <td>X speed.</td>
+            </tr>
+            <tr class="player">
+                <td>0x64</td>
+                <td>s32</td>
+                <td>Y speed.</td>
+            </tr>
+            <tr class="player">
+                <td>0x68</td>
+                <td>s32</td>
+                <td>Z speed.</td>
+            </tr>
+            <tr class="player">
+                <td>0xB0</td>
+                <td>s32</td>
+                <td>X position.</td>
+            </tr>
+            <tr class="player">
+                <td>0xB4</td>
+                <td>s32</td>
+                <td>Y position.</td>
+            </tr>
+            <tr class="player">
+                <td>0xB8</td>
+                <td>s32</td>
+                <td>Z position.</td>
+            </tr>
+            <tr class="player">
+                <td>0xBC</td>
+                <td>Unknown</td>
+                <td>Model X scale.</td>
+            </tr>
+            <tr class="player">
+                <td>0xC0</td>
+                <td>Unknown</td>
+                <td>Model Y scale.</td>
+            </tr>
+            <tr class="player">
+                <td>0xC4</td>
+                <td>Unknown</td>
+                <td>Model Z scale.</td>
+            </tr>
+            <tr class="player">
+                <td>0xCA</td>
+                <td>u16</td>
+                <td>Yaw.</td>
+            </tr>
+            <tr>
+                <td>0xD8</td>
+                <td>u32</td>
+                <td>Pointer to the object's model data. More specifically, it points to the <code>BMD0</code> header.</td>
+            </tr>
+            <tr>
+                <td>0xDC</td>
+                <td>u32</td>
+                <td>Pointer to the <code>MDL0</code> header.</td>
+            </tr>
+            <tr>
+                <td>0xE0</td>
+                <td>Unknown</td>
+                <td>Unknown</td>
+            </tr>
+            <tr>
+                <td>0xE4</td>
+                <td>u32</td>
+                <td>Pointer to <code>TEX0</code> header.</td>
+            </tr>
+            <tr class="player">
+                <td>0xEC</td>
+                <td>u32</td>
+                <td>If <code>value mod 2 = 1</code>, then player 1 will keep their body parts. If <code>value mod 2 = 0</code>, then player 1's face, torso, and pants will match player 2's. Seemingly does nothing in the character customizer.</td>
+            </tr>
+            <tr>
+                <td>0xF8</td>
+                <td>u32</td>
+                <td>Pointer to data that is 0x10 ahead of the model's name (i.e. 0x30 ahead of <code>MDL0</code> header). Replacing this with a pointer to a piece of data that is 0x10 ahead of a <i>different</i> model's name is what actually replaces the model.</td>
+            </tr>
+            <tr>
+                <td>0x104</td>
+                <td>u32</td>
+                <td>Pointer to data that is 0x1A0 ahead of the <code>BCA0</code> header (i.e 0x18C ahead of <code>JNT0</code> header)</td>
+            </tr>
+            <tr>
+                <td>0x148</td>
+                <td>u32</td>
+                <td>Same pointer as +0x104.</td>
+            </tr>
+            <tr class="player">
+                <td>0x17C</td>
+                <td>Unknown</td>
+                <td>Freezing this to certain values changes the way animations look.</td>
+            </tr>
+            <tr class="player">
+                <td>0x180</td>
+                <td>Unknown</td>
+                <td>Animation thing.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Other</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Size</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0x021019A8</td>
+                <td>u8</td>
+                <td>Current top screen menu. Determines which menu/screen the top screen is displaying.</td>
+            </tr>
+            <tr>
+                <td>0x021019B0</td>
+                <td>u8</td>
+                <td>Next map number. Determines which map you will spawn in the next time you enter a loading zone.</td>
+            </tr>
+            <tr>
+                <td>0x021019B4</td>
+                <td>u8</td>
+                <td>Next exit number. Determines which exit you will spawn at the next time you enter a loading zone.</td>
+            </tr>
+            <tr>
+                <td>0x021019C4</td>
+                <td>u8</td>
+                <td>Unknown. Freezing its value to 0 and entering a loading zone makes the top screen fade to black instead of temporarily freezing, then wiping.</td>
+            </tr>
+            <tr>
+                <td>0x021019C8</td>
+                <td>u8</td>
+                <td>Current bottom screen menu. Determines which menu/screen the bottom screen is displaying.</td>
+            </tr>
+            <tr>
+                <td>0x021019E4</td>
+                <td>u8</td>
+                <td>Unknown. Freezing its value to 0 and entering a loading zone makes the bottom screen fade to black instead of temporarily freezing, then wiping. You also seem to maintain some control over your character during the transition.</td>
+            </tr>
+            <tr>
+                <td>0x021019B0</td>
+                <td>u8?</td>
+                <td>Determines which level you will spawn in when entering a loading zone. Freezing to this to 0x49 and entering a loading zone sends you to an unused map.</td>
+            </tr>
+            <tr>
+                <td>0x021019F0</td>
+                <td>u16</td>
+                <td>Unknown. Its default value seems to be 0x303, but changes when going through a loading zone. Freezing it to 0x303 and going through a loading zone keeps both screens frozen.</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083BC</td>
+                <td>s32</td>
+                <td>Pointer to player 1's base.</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083C0</td>
+                <td>s32</td>
+                <td>Pointer to player 2's base.</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083C4</td>
+                <td>s32</td>
+                <td>Pointer to player 3's base.</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083C8</td>
+                <td>s32</td>
+                <td>Pointer to player 4's base.</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083D0</td>
+                <td>s32?</td>
+                <td>Changing this value causes characters and objects to get shaded in different colors. Default value 0x7ED477BD?</td>
+            </tr>
+            <tr class="player">
+                <td>0x021083D4</td>
+                <td>Unknown</td>
+                <td>Similar to previous</td>
+            </tr>
+            <tr>
+                <td>0x02108C94</td>
+                <td>u8 (bool)</td>
+                <td>Determines whether the main level object is visible or not. 1 (default) = visible, 0 = invisible.</td>
+            </tr>
+            <tr class="player">
+                <td>0x02108C9E</td>
+                <td>u8</td>
+                <td>Determines what character P1 is.</td>
+            </tr>
+            <tr class="player">
+                <td>0x02108C9F</td>
+                <td>u8</td>
+                <td>Determines what character P2 is.</td>
+            </tr>
+            <tr class="player">
+                <td>0x02108CA0</td>
+                <td>u8</td>
+                <td>Determines what character P3 is.</td>
+            </tr>
+            <tr class="player">
+                <td>0x02108CA1</td>
+                <td>u8</td>
+                <td>Determines what character P4 is.</td>
+            </tr>
+            <tr>
+                <td>0x02108CD0</td>
+                <td>u32?</td>
+                <td>0x0 by default. Freezing to 0xFFFFFFFF makes both P1 and P2 completely black. Changing to 0xFF makes both P1 and P2 rapidly flash different colors.</td>
+            </tr>
+            <tr>
+                <td>0x02108D14</td>
+                <td>s32</td>
+                <td>Camera X position.</td>
+            </tr>
+            <tr>
+                <td>0x02108D18</td>
+                <td>s32</td>
+                <td>Camera Y position.</td>
+            </tr>
+            <tr>
+                <td>0x02108D1C</td>
+                <td>s32</td>
+                <td>Camera Z position.</td>
+            </tr>
+            <tr>
+                <td>0x02108D2C</td>
+                <td>Unknown</td>
+                <td>Camera pitch.</td>
+            </tr>
+            <tr>
+                <td>0x02108D2E</td>
+                <td>Unknown</td>
+                <td>Camera yaw.</td>
+            </tr>
+            <tr>
+                <td>0x02108EBC</td>
+                <td>u32</td>
+                <td>Pointer to the thing the camera is focusing on? Its value is the P1 base, and substituting the value for P2's base does change what the camera looks at in a way, but it doesn't look at P2 the same way it does for P1.</td>
+            </tr>
+            <tr>
+                <td>0x02108EF0</td>
+                <td>u32</td>
+                <td>Pointer to a pointer to the player's X position. Changing the pointer to the player's X position to the player's Y or Z position has weird effects.</td>
+            </tr>
+            <tr>
+                <td>0x02108EF4</td>
+                <td>u8</td>
+                <td>Camera mode.</td>
+            </tr>
+            <tr>
+                <td>0x02108FF8</td>
+                <td>u8</td>
+                <td>Camera effect.</td>
+            </tr>
+        </tbody>
+    </table>
+<!--
+    <ul style="width:50%">
+        <li><b>0x0</b>: The base.</li>
+        <li><b>0x8</b>: The "visibility address". Editing its value makes objects invisible and/or intangible.
+            <br>Known visibility values:
+        </li>
+        <ul>
+            <li><code>0x80100005</code>&nbsp;(e.g. <i>Escape from Echo Base</i> box puzzle forcefield)</li>
+            <li><code>0x801243A5</code>&nbsp;(the player and party members)</li>
+            <li><code>0x80300001</code>&nbsp;(e.g. the current level)</li>
+            <li><code>0x81100005</code>&nbsp;(e.g. object <code>DSCrate</code>, found in <i>Death Star Escape</i>)</li>
+        </ul>
+        <li style="color:red"><b>0x40</b>: Airborne/Grounded state. 0 = airborne, 1 = grounded.</li>
+        <li style="color:red"><b>0x60</b>: X speed.</li>
+        <li style="color:red"><b>0x64</b>: Y speed.</li>
+        <li style="color:red"><b>0x68</b>: Z speed.</li>
+        <li style="color:red"><b>0xB0</b>: X position.</li>
+        <li style="color:red"><b>0xB4</b>: Y position.</li>
+        <li style="color:red"><b>0xB8</b>: Z position.</li>
+        <li style="color:red"><b>0xBC</b>: Model X scale.</li>
+        <li style="color:red"><b>0xC0</b>: Model X scale.</li>
+        <li style="color:red"><b>0xC4</b>: Model X scale.</li>
+        <li><b>0xD8</b>: Pointer to the object's model data. More specifically, it points to the <code>BMD0</code> header.</li>
+        <li><b>0xDC</b>: Pointer to the <code>MDL0</code> header.</li>
+        <li><b>0xE0</b>: Unknown.</li>
+        <li><b>0xE4</b>: Pointer to <code>TEX0</code> header.</li>
+        <li><b>0xF8</b>: Pointer to data that is 0x10 ahead of the model's name (i.e. 0x30 ahead of <code>MDL0</code> header). Replacing this with a pointer to a piece of data that is 0x10 ahead of a <i>different</i> model's name is what actually replaces the model.</li>
+        <li><b>0x104</b>: Pointer to data that is 0x1A0 ahead of the <code>BCA0</code> header (i.e 0x18C ahead of <code>JNT0</code> header)</li>
+        <li><b>0x148</b>: Same pointer as +0x104.</li>
+    </ul>
+-->
+    <h1>How To Search For Objects</h1>
+    <ol style="width:50%">
+        <li>In RAM Search, search for a specific hexadecimal value equal to <code>30444D42</code>. This will search for the <code>BMD0</code> file header in the game's memory.</li>
+        <li>Pick an address from the list of results and go to that address in the memory viewer.</li>
+        <li>Models in memory will start with a <code>BMD0</code> header, then have a <code>MDL0</code> header not far after it, then there will be the name of the model not far after the <code>MDL0</code> header.</li>
+        <li>Go to the address that is 0x10 ahead of the beginning of the model name. Then, in RAM Search, search for a specific hexadecimal value equal to that address.</li>
+        <ul>
+            <li>For example, if the address that is 0x10 ahead of a certain model's name is <code>0x02209BFC</code>, then you would search for a specific hexadecimal value equal to <code>02209BFC</code> in RAM Search.</li>
+            <li>Ideally, the number of possibilities returned from the search will equal how many of that specific object there are in the given area.</li>
+        </ul>
+        <li>After clicking the search button, subtract <code>0xF8</code> from the hex value in step 4 to find the object's base.</li>
+    </ol>
+    <h1>Camera Modes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Mode #</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0x0</td>
+                <td>Camera freezes in place.</td>
+            </tr>
+            <tr>
+                <td>0x1</td>
+                <td>Default behavior? Behaves like it does in the Cantina starting room.</td>
+            </tr>
+            <tr>
+                <td>0x2</td>
+                <td>Free mode. Camera freezes in place, but pressing Up/Down tilts it up/down, pressing Left/Right tilts it left/right, and pressing L/R moves it forward/backward</td>
+            </tr>
+            <tr>
+                <td>0x3</td>
+                <td>360 mode. Pressing L/R rotates it left and right in a circle around your character.</td>
+            </tr>
+            <tr>
+                <td>0x4</td>
+                <td>Camera moves relative to P1 but is stuck at one angle.</td>
+            </tr>
+            <tr>
+                <td>0x5</td>
+                <td>This one is weird. Pressing different directions makes it rotate differently, except for Up-Right, which makes it behave similarly to Mode 0x4.</td>
+            </tr>
+            <tr>
+                <td>0x6</td>
+                <td>Camera is frozen at Y = 61440 and pitch (up/down angle) is seemingly frozen at 64926 (u16).</td>
+            </tr>
+            <tr>
+                <td>0x7</td>
+                <td>Appears to be the same as 0x3, just 360 mode again.</td>
+            </tr>
+            <tr>
+                <td>0x8</td>
+                <td>Appears to be the same as 0x4.</td>
+            </tr>
+            <tr>
+                <td>0x9</td>
+                <td>Sandbox cam. Camera is positioned directly behind P1. D-pad Left/Right rotates it left/right and you can press Down to walk backwards.</td>
+            </tr>
+            <tr>
+                <td>0xA</td>
+                <td>Similar to Mode 0x5.</td>
+            </tr>
+            <tr>
+                <td>0xB</td>
+                <td>Camera freezes in place.</td>
+            </tr>
+            <tr>
+                <td>0xC</td>
+                <td>Camera gradually moves to the origin (0,0,0), which is its final destination. Pitch and yaw are frozen.</td>
+            </tr>
+            <tr>
+                <td>0xD-0x13</td>
+                <td>Camera freezes in place.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1></h1>
+</body>
+</html>
