@@ -1,0 +1,89 @@
+   17: XXXNOT USED
+18-39: (Cheat names in the shop)
+   47: XXXNOT USED
+48-54: (Random textboxes)
+55-90: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+  162: PLACEHOLDER STRING
+  163: PLACEHOLDER STRING
+  170: XXXNot used
+
+177 is where the game starts displaying level names. It seems that each level has possibly unused text describing the level?
+Unfortunately, some of the text can't be read because the character icons are layered over the text.
+If you press the right or left arrows on the bottom screen, there are two frames where the bottom screen shows different text.
+NEVERMIND this is not unused, this is just the text that scrolls when you select Replay Story on a level
+177: Episode IV
+178: THE BLOCKADE RUNNER
+179: gainst the evil Galactic Empire.
+     Rebel spaceshps, striking from a hidden (illegible) (this appears for two frames when switching from 178 to 179)
+180: to destroy an (illegible)
+181: t(illegible) freedom to the galax(illegible)!
+184: MOS EISLEY SPACEPORT
+185: his new droids have bro(illegible.!)
+186: et data to the Rebel Alliance.!
+187: [Imp]erial forces are everywhere...!
+190: RESCUE THE PRINCESS
+191: Base to the evil Darth Vader.!
+192: the j(illegible) t(illegible)gl(illegible)perspace.!
+193: shadow of the Death Star...!
+196: DEATH STAR ESCAPE
+197: a way out of the D[eath] S[tar]!
+198: way to the Millennium Falcon!
+199: closer to his final destiny...!
+202: THE TRENCH RUN
+203: on the Imperial space station.!
+204: ghty (illegible)h (illegible)r's supe(illegible)er.!
+205: [h]e hopes of an entire galaxy...!
+208: HOTH BATTLE
+209: su(illegible) them across the galaxy.!
+210: he remote ice world of Hoth.!
+211: nto the far reaches of space[...]!
+214: ESCAPE FROM ECHO BASE
+215: [u]t the enemy is overwhelming.!
+216: evacuation of rebel personnel.!
+217: escape route for themselves...!
+220: THE ASTEROID FIELD
+221: [l] base on the ice planet Hoth.!
+222: his escape by X-Wing fighter.!
+223: ges the Imperial ships above[...]!
+226: BETRAYAL OVER BESPIN
+227: high above the planet Bespin.!
+228: n hopes for a warm welcome.!
+229: aval, nothing is as it seems...!
+232: CLOUD CITY TRAP
+233: ends captured by Darth Vader.!
+234: on a course for Cloud City.!
+235: true target of Vaders t(illegible)...!
+238: JABBA'S PALACE
+239: vile sinister Jabba the Hutt.!
+240: the first dreaded Death S[tar.!]
+241: [res]tore freedom to the galaxy[...]!
+244: THE GREAT SARLACC PIT
+245: [gala]xy appears increasingly bleak.!
+246: the fears[ome] S[arl]acc beast (illegible)[.!]
+247: nated the powers of a Jedi...!
+250: THE SPEEDER CHASE
+251: construction can be completed.!
+252: nearby forest moon of Endor.!
+253: [d]eadly Imperial space station...!
+256: BATTLE ON ENDOR
+257: [co]nfrontation with Darth [Vad]er.!
+258: ar is [al]ready full[ f]unctional.!
+259: e intrepid rebel strike team...!
+262: HEART OF THE DEATH STAR
+263: tar shield generator on Endor[.]!
+264: [enem]y ships have been destroyed.!
+265: c(illegible) deep into its da[r]k heart...!
+268: DESTINY
+269: [g]the[n] [o]nc[e] Anakin Skywalker[.!]
+270: r's path has been dark indeed.!
+271: [h]is son, and reclaim his fate[...]!
+273: Episode ??
+274: SANDBOX
+275: in a galaxy far, far, away...!
+276: the life into the barren sand.!
+277: e of creation can be changed...! 
+279: ^1AMAZE ENTERTAINMENT
+758: [for putting up with a]ll of my travels to the UK...)
+770: (First instances of garbage text)
+840: (Bottom screen gets corrupted, some sprites flash cyan and purple)
+The bottom screen started getting corrupted again at around 1000

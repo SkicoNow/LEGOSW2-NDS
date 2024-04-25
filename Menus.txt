@@ -1,0 +1,53 @@
+Setting address 0x1019A8 to these values does the following:
+0x0: Default value, does nothing
+0x1-0x3: CRASH
+0x4: Standard warp?
+0x5: CRASH
+0x6: Title sequence, bottom screen text flashes blue and purple
+0x7-0x8: CRASH
+0x9: CRASH, but sound cuts out completely
+0xA: CRASH, but bottom screen gets corrupted
+0xB: "Select character," which is the screen you see when you activate the character customizer and have at least one character saved
+0xC: "Save character"
+0xD-0xE: CRASH
+0xF: Credits?
+0x10: CRASH
+0x11: Title screen, the top screen is black except for the spaceships that fly by
+0x12: CRASH
+0x13: Save game, Party Members text is red
+0x14-0x1B: CRASH
+0x1C: Random level intro text sequence
+0x1D-0x1E: CRASH
+0x1F: SOFTLOCK, top screen shows the scrolling stars background that the bottom sceren has
+0x20: Arena Mode Select
+Pressing "Host Multi-Card Game" makes the screen fade to black very slowly before crashing
+Pressing "Host Single-Card Game" repeatedly makes the screen fade in and out forever
+Pressing "Join Wireless Game" repeatedly makes the screen fade in and out forever
+Pressing Exit CRASHES
+0x21: Hosting Wireless Game, but CRASHES
+0x22: Browsing Wireless Game
+0x23:
+    "is trying to connect. Do you
+    want to let them join your
+    game?" (CRASH)
+0x24: Hosting Single-Card Game, pressing either Exit or START CRASHES
+0x25: CRASH
+0x26: "Press A to Continue" on bottom screen, I don't recognize this. Pressing A or B fades to black and the game resumes as normal.
+0x27: Waiting for Host, but CRASHES
+0x28: CRASH, but the Party Members text is light-green and Leia's icon is corrupted
+0x29: "Select Character" and "Greedo", but CRASHES
+0x2A: Some multiplayer thing??? I swear I've never seen this in my life. Pressing the camera icon CRASHES
+0x2B: Multiplayer scores, every character icon is 4LOM and pressing R CRASHES
+0x2C-0x2D: CRASH
+0x2E: Camera lookaround bottom screen, the bottom screen briefly partially flashes red and gets corrupted before advancing to the actual screen.
+0x2F-0x30: CRASH
+0x31: Cantina shop. Graphics are slightly corrupted and pressing the red X CRASHES
+0x32: CRASH
+0x33: Level complete screen. Bottom screen is slightly corrupted and two 4LOM icons very slowly float to the left and wrap around to the right edge of the screen indefinitely
+0x34: CRASH
+0x35: Pause screen? No pause screen options are visible except for the DS logo, also the Party Members text is white
+0x36: "Game Settings", but CRASHES
+0x37: CRASH but music is still playing
+0x38: Bottom screen briefly gets corrupted before showing a slightly corrupted version of the scrolling star background on the bottom screen
+0x39: Pressing either the camera or hat icon CRASHES, top screen is the star background but not moving
+0x3A-0x4F: CRASH

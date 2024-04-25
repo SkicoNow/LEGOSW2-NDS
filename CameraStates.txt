@@ -1,0 +1,113 @@
+02108EF4:
+0x0: Camera freezes in place
+0x1: Default behavior? Behaves like it does in the Cantina starting room
+0x2: Camera freezes in place, but pressing Up/Down tilts it up/down, pressing Left/Right tilts it left/right, and pressing L/R moves it forward/backward
+0x3: 360 mode, pressing L/R rotates it left and right in a circle around your character
+0x4: Camera moves relative to your character but is stuck at one angle
+0x5: This one is weird. Pressing different directions makes it rotate differently, except for Up-Right, which makes it behave similarly to mode 4
+0x6: Camera is frozen at Y = 61440 and pitch (up/down angle) is seemingly frozen at 64926 (2-byte unsigned)
+0x7: Appears to be the same as 3, just 360 mode again
+0x8: Appears to be the same as 4
+0x9: Sandbox cam. Left/Right rotates it left/right and you can press Down to walk backwards
+0xA: Similar to mode 5
+0xB: Camera freezes in place
+0xC: Camera automatically moves to the origin (0,0,0), pitch and yaw are frozen
+0xD-0x13: Camera freezes in place
+
+02108FF8:
+0x0: Camera automatically moves to the origin (0,0,0), pitch and yaw are frozen
+0x1: Camera's roll gradually increases/decreases. Its roll can be seen in address 0x02109008.
+0x2: Camera shakes. The shaking can be seen in addresses 0x02108FFC and 0x02109004. Presumably used in the Echo Base intro cutscene
+0x3: Default/no effect
+0x4 and beyond: Camera automatically moves to the origin (0,0,0), pitch and yaw are frozen
+
+02109080-0210908F is weird, game tends to crash when changing the values to FF
+
+94000130 FFFB0000
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+D2000000 00000000
+94000130 FFF70000
+22108EF4 00000003
+D2000000 00000000
+94000130 FDFF0000
+52108EF4 03030300
+DA000000 02108D2E
+D4000000 00000100
+D7000000 02108D2E
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FEFF0000
+52108EF4 03030300
+DA000000 02108D2E
+D4000000 FFFFFF00
+D7000000 02108D2E
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FFEF0000
+52108EF4 03030300
+D9000000 02108D14
+D4000000 00000800
+D6000000 02108D14
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FFDF0000
+52108EF4 03030300
+D9000000 02108D14
+D4000000 FFFFF700
+D6000000 02108D14
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FFBF0000
+52108EF4 03030300
+D9000000 02108D1C
+D4000000 FFFFF700
+D6000000 02108D1C
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FF7F0000
+52108EF4 03030300
+D9000000 02108D1C
+D4000000 00000800
+D6000000 02108D1C
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+92FFFFA8 FBFF0000
+52108EF4 03030300
+DA000000 02108D2C
+D4000000 00000100
+D7000000 02108D2C
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FFFD0000
+52108EF4 03030300
+DA000000 02108D2C
+D4000000 0000FF00
+D7000000 02108D2C
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+92FFFFA8 F7FF0000
+52108EF4 03030300
+D9000000 02108D18
+D4000000 00000800
+D6000000 02108D18
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000
+94000130 FFFE0000
+52108EF4 03030300
+D9000000 02108D18
+D4000000 FFFFF700
+D6000000 02108D18
+62108EF4 03030300
+02108EF4 03030300
+D2000000 00000000

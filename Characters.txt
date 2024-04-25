@@ -1,0 +1,99 @@
+0x0: 4-LOM
+0x1: Anakin (?) Force
+0x2: Biggs
+0x3: Bith Band 1
+0x4: Bith Band 2
+0x5: Bith Band 3
+0x6: Bith Band 4
+0x7: Boba Fett
+0x8: Bossk
+0x9: C-3PO
+0xA: Chewbacca
+0xB: Darth Vader
+0xC: Death Star Trooper (?)
+0xD: Dengar
+0xE: Emperor
+0xF: Destiny red guy
+0x10: Ewok
+0x11: Gamorrean Guard
+0x12: Gonk Droid
+0x13: UNUSED General Grievous old guy, green lightsaber
+0x14: Greedo
+0x15: Han Solo
+0x16: Endor Han Solo
+0x17: Han in Carbonite
+0x18: Hoth Han Solo
+0x19: Sarlacc Pit Han Solo
+0x1A: Stormtrooper Han
+0x1B: IG-88
+0x1C: Imperial Officer
+0x1D: Jango Fett
+0x1E: JABBA
+0x1F: Jawa
+0x20: K-3PO
+0x21: Lando
+0x22: Lando Jabba's Palace
+0x23: Leia
+0x24: Leia Bounty Hunter
+0x25: Cloud City Leia
+0x26: Leia Endor
+0x27: Hoth Leia
+0x28: Jabba Prisoner Leia (unofficial name because locked)
+0x29: Tattooine Luke
+0x2A: Cloud City Luke
+0x2B: Dagobah Luke
+0x2C: Endor Luke
+0x2D: UNUSED General Grevious old guy, gray pistol
+0x2E: Jabba's Palace Luke
+0x2F: Stormtrooper Luke
+0x30: Mace Windu
+0x31: UNUSED General Grevious old guy, green lightsaber
+0x32: MSE-6
+0x33: Obi-Wan
+0x34: Obi-Wan Force
+0x35: R2-D2
+0x36: R5-D4
+0x37: RANCOR
+0x38: Rebel Trooper
+0x39: UNUSED General Grevious old guy, green lightsaber
+0x3A: Rebel Snowtrooper
+0x3B: Salacious Crumb
+0x3C: Sandtrooper
+0x3D: Scout Trooper
+0x3E: Imperial Officer but black clothes (obviously unofficial name because locked)
+0x3F: Snowtrooper
+0x40: Stormtrooper
+0x41: TIE Fighter Pilot
+0x42: Tusken Raider
+0x43: Wicket
+0x44: Wuher
+0x45: Yoda
+0x46: Yoda Force
+0x47: Zuckuss
+0x48: CRASH
+0x49: Custom Character 1
+0x4A: Custom Character 2 
+0x4B: Custom Character 3
+0x4C-0x4E: CRASH
+0x4F: (cycles between random character combos)
+0x50-0x53: (cycles between random Sarlacc Pit NPCs?)
+0x54: ATAT, seemingly can't move
+0x55: ATST
+0x56: Floating ATST (unofficial name)
+0x57: Imperial Speederbike (unofficial name)
+0x58: Millenium Falcon
+0x59: Probe Droid
+0x5A: Rebel Speederbike
+0x5B: Slave I
+0x5C: Snowspeeder
+0x5D: T-16 Skyhopper
+0x5E: Tie Advance
+0x5F: TIE-Fighter
+0x60: TIE-Interceptor
+0x61: X34 Land Speeder
+0x62: X-Wing
+0x63: Y-Wing
+0x64: CRASH
+0x65: (makes the "you can't be this character" noise, jumping CRASHES)
+0x66-0x7F: CRASH
+0x80:0xFF: (does nothing)

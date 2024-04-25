@@ -1,0 +1,32 @@
+Setting address 0x1019C8 to these values does the following:
+0x0: Default value, does nothing
+0x1-0x1B: CRASH (0x4 crashes but fucks up the textures, 0x6 is corrupted opening sequence, 0x9 is similar to 0x4, 0xA is character customizer, 0xB and 0xC are the "Select character" menu, 0xF is black, 0x11 is title screen, 0x13 is Save Game, 0x1C is the opening text before a level but crashes, )
+0x1C: Credits, but tends to CRASH
+0x1D: CRASH
+0x1E: Screen wipe
+0x1F: Bottom screen is nothing but scrolling star background
+0x20: Arena Mode Select
+0x21: CRASH
+0x22: Browsing Wireless Game
+0x23: CRASH but sound cuts out completely
+0x24: Hosting Single-Card Game
+0x25: CRASH
+0x26: "Communication Error" "Press A to Continue"
+0x27: CRASH
+0x28-0x29: CRASH
+0x2A: Multiplayer thing
+0x2B: Multiplayer scores, pressing R CRASHES
+0x2C-0x2D: CRASH
+0x2E: Camera lookaround bottom screen
+0x2F: CRASH
+0x30: Bottom screen fades to black, then back to Party Members
+0x31: Cantina shop
+0x32: CRASH
+0x33: Level complete, the camera is fucked up and the character colors are also fucked
+0x34: "Free Play Unlocked", which is in red text. The camera gets fucked up
+0x35: Pause menu but the game remains unpaused
+0x36: CRASH, top screen gets corrupted
+0x37: Bottom screen has the static (i.e. not scrolling) star background
+0x38: I am fucking flabbergasted. My jaw is agape as I type this. The bottom screen turns into an image of a fucking gray car where the driver's side door has the Griptonite Games logo on it and a gray logo saying "focus" is above the car. What the hell is this???
+0x39: The bottom screen is black, the top screen is the static star BG, and an unknown red graphic on the top screen alternates between three states
+0x3A-0x4F: CRASH

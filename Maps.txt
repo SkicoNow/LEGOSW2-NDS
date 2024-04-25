@@ -1,0 +1,85 @@
+ 0: The Trench Run ceremony cutscene
+ 1: The Asteroid Field intro cutscene with corrupted textures
+ 2: The Asteroid Field section 2 with corrupted textures
+ 3: The Asteroid Field section 3 (?) with corrupted textures
+ 4: VS mode temple-looking stage
+ 5: VS mode Mos Eisley Spaceport-looking stage
+ 6: The Blockade Runner intro cutscene, but you spawn in the first room and the camera is glitched
+ 7: The Blockade Runner section 2
+ 8: The Blockade Runner section 3, cutscene plays
+ 9: Cantina VS room
+10: Episode IV room
+11: Episode V room
+12: Episode V1 room
+13: Cantina spaceship room
+14: Cantina starting room
+15: CHARACTER CUSTOMIZER ROOM, 360 CAMERA
+16: Betrayal Over Bespin section 1
+17: Betrayal Over Bespin section 2
+18: Betrayal Over Bespin intro cutscene
+19: Cloud City Trap main area/section 1
+20: Cloud City Trap Darth Vader fight/section 2
+21: Cloud City Trap intro cutscene
+22/80: Heart of the Death Star intro cutscene
+23/81: Heart of the Death Star section 2
+24/82: Heart of the Death Star heart room
+25/83: The section after the heart room
+26: Death Star Escape starting Story Mode Room
+27: Death Star Escape intro cutscene
+28: Death Star Escape room with the slides and beds
+29: Death Star Escape unused cutscene? The Millenium Falcon flies out of that giant window, flies back in, then flies out
+30: CRASH
+31: Rescue the Princess section 2?
+32: Rescue the Princess Obi-Wan bridge cutscene
+33: Rescue the Princess final section
+34: Rescue the Princess intro cutscene
+35: Destiny starting room
+36: Destiny room with the chess board and loading zone to puzzle room
+37: Battle on Endor intro cutscene room with corrupted textures, cutscene doesn't play (plays on Japanese)
+38: Battle on Endor 2 Ewoks cutscene with corrupted textures
+39: Battle on Endor giant walker room with corrupted textures
+40: Battle on Endor "lost woods" room
+41: Battle on Endor bunker thing
+42: Cloud City Trap ending cutscene
+43: Hoth Battle section 1
+44: Hoth Battle section 2
+45: Hoth Battle intro cutscene
+46: Escape from Echo Base intro cutscene
+47: Escape from Echo Base section 2 (aka the slide)
+48: Escape from Echo Base section 3
+49: Escape from Echo Base box room
+50/74: Jabba's Palace section 1
+51/78: Jabba's Palace intro cutscene (on JP you spawn in section 1, but only the blue room's textures are active, if that makes sense)
+52/79: Jabba's Palace final section (aka Rancor fight) (JP is another black room)
+53: Mos Eisley Spaceport section 3 (JP is the green room in Jabba, you spawn in front of the door leading to Jabba)
+54: Mos Eisley Spaceport box puzzle room (JP is the Jabba intro cutscene)
+55: Mos Eisley Spaceport room where you find the jail with R2-D2 and C-3PO (JP Rancor fight)
+56: Mos Eisley Spaceport Cantina
+57: Destiny Endor cutscene (60 on JP, has corrupted textures on JP)
+58: Sandbox
+59: Sarlacc Pit intro cutscene
+60: Sarlacc Pit Boba Fett fight
+61: Sarlacc Pit section before Boba Fett fight
+62: Sarlacc Pit section 2
+63: Random outer space void
+64: The Speeder Chase section 1 with corrupted textures
+65: The Speeder Chase intro cutscene, not many textures are corrupted
+66: The Speeder Chase unrecognized section with corrupted textures
+67: The Speeder Chase walker fight with corrupted textures
+68: The Speeder Chase cutscene with the Ewok running around
+69: Mos Eisley Spaceport intro cutscene
+70: Mos Eisley Spaceport section 2
+71: The Trench Run beginning
+72: The Trench Run intro cutscene
+73: UNUSED ROOM!!! Once you spawn in, holding up will make you touch a loading zone that spawns you in the Death Star Escape starting Free Play Room (room 26). Entering the loading zone while the address is still being cheated to 73 will respawn you in the room as Obi-Wan and Tattooine Luke (77 on JP)
+74: Jabba's Palace section 1
+75: Jabba's Palace section 1 but all textures and objects are missing except for a ring of gray studs in the distance
+76: Same as 75? Camera state is 3
+77: Jabba's Palace green room
+78: Jabba's Palace intro cutscene (JP CRASH)
+79: Jabba's Palace final section (aka Rancor fight)
+80: Heart of the Death Star intro cutscene
+81: Heart of the Death Star section 2
+82: Heart of the Death Star heart room
+83: The section after the heart room
+84-255: CRASH (85 crashes but might have varying screen effects)

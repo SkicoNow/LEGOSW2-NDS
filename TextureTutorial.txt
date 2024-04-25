@@ -1,0 +1,68 @@
+BMD0:
+- 0x8: File size = 0x28AC4
+- 0x14: Offset to TEX0 chunk = 0xDD2C
+
+TEX0:
+- 0x4: Chunk size = 0x1AD98
+- 0xC: Texture data size = 0x2C00 (bitshift << 3 = 0x16000)
+- 0x14: Texture data offset = 0x438
+
+How I dumped the Cantina Hangar model with correct textures:
+BMD0:
+1. In the game, go to the Cantina Hangar and wait for the screen wipe transition to finish.
+2. Go to Tools > View Memory and press the Dump All button.
+3. Open the newly dumped .bin file in HxD.
+4. Press Ctrl + F, select "Text-string", type BMD0 and press Search all
+5. In the search results tab, double-click through the results until you see the string CantinaHangar_Ma
+6. At offset 0x8, the total file size is 0x14CFC (shown as FC 4C 01 00). Place the cursor behind the B in BMD0 and right-click.
+7. Click Select block..., type 14CFC in the Length textbox (make sure the hex radio button is selected) and click OK
+8. This should select all the data just before the DU before the BTX0 header.
+9. Go to File > Save selection... and save the file with a .bmd extension.
+
+TEX0:
+1. At offset 0x4 from the TEX0 header (located just after the BTX0 header found in BMD0 step 8), the chunk size should be 0x8F14 (14 8F 00 00).
+2. Move the cursor to the beginning of the TEX0 header, right-click and click Select block.
+3. Type 0x8F14 in the Length textbox and click OK.
+4. Press Ctrl + C to copy the TEX0 chunk.
+5. Open the .bmd file you created in HxD.
+6. Go to the very end of the file and paste the TEX0 chunk.
+7. Now, make the following changes:
+
+BMD0:
+ - 0x8: The file size should be changed from FC 4C 01 00 to 10 DC 01 00 (the new length of the file, which can be found just by pressing Ctrl + A and looking at the Length section at the bottom of the program)
+ - 0xE: The number of chunks should be changed from 01 00 to 02 00 because now we have both a MDL0 and TEX0 chunk, while the original BMD0 data only had the MDL0 chunk
+ - 0x10: The offset to the MDL0 chunk should be changed from 14 00 00 00 to 18 00 00 00 because of this next step:
+ - 0x14: Place the cursor here and go to Edit > Insert bytes. Insert the bytes 00 4D 01 00; this will be the offset to the TEX0 chunk since it gets omitted when only the MDL0 chunk is present.
+
+8. Save the file and load it in Tinke. Click view and you should see the Hangar model but with corrupted textures. This is because we want to make sure the model was exported correctly. To fix the textures, follow the next few steps.
+9. Go to offset 0xC in the TEX0 chunk. The texture data size should be 0xB00 (00 0B).
+10. Go to https://bit-calculator.com/bit-shift-calculator and bit shift 0xB00 left by 3. This will give you the number 0x5800.
+11. Go to offset 0x14 in the TEX0 chunk to view the texture data offset. It should be 0x46C (6C 04).
+12. Place the cursor at offset 0x0 TEX0 chunk, right-click and click Select block.
+13. Type 0x46C to navigate to the beginning of the texture data. Your cursor should be placed before a D in DU.
+14. Place the cursor at the texture data offset in the TEX0 chunk, right-click and click Select block.
+15. Type 0x5800 in the Length textbox and click OK.
+16. Select all the data after the highlighted region and press Backspace to delete it.
+17. Now, make the following changes:
+
+BMD0:
+ - 0x8: The file size should be changed from 10 DC 01 00 to 6C A9 01 00 (the new length of the file)
+
+TEX0:
+ - 0x4: The TEX0 chunk size should be changed from 14 8F 00 00 to 6C 5C 00 00 (Select the data from the beginning of the TEX0 header to the end of the file to get this value)
+
+18. Save the file and load it in Tinke. Clicking the View button in Tinke will throw an "Unhandled exception occurred in your application" error, but pressing Continue will still let you view the file. This makes me think that the texture data still isn't 100% accurate, and if it isn't, it's at least pretty damn close in my opinion.
+
+1. At offset 0xC from the TEX0 header (located just after the BTX0 header found in BMD0 step 8), the texture data size should be 0xB00 (00 0B).
+2. Since the texture data size must be bit shifted left by 3, go to https://bit-calculator.com/bit-shift-calculator and shift 0xB00 left by 3. This should give you the number 0x5800
+3. At offset 0x10 from the TEX0 header, the texture data offset should be 0x46C.
+4. Place the cursor behind the T in TEX0, right-click and click Copy offset. Right-click the cursor again and click Select block.
+5. Type 0x46C in the Length textbox (make sure the hex radio button is selected) and click OK to make sure you navigate to the start of the texture data correctly. The cursor should be placed before a D in DU.
+6. Place the cursor at the start of the TEX0 header, right-click and click Select block.
+7. Type 0x5800 (the bitshift << 3 texture data size) in the Length textbox (make sure the hex radio button is selected) and click OK to navigate to the end of the texture data.
+8. Press Ctrl + C to copy the TEX0 chunk.
+
+Combining the BMD0 and TEX0 data:
+1. Open the .bmd file you created in HxD.
+2. Place the cursor at the very end of the file and press Ctrl + V to paste the TEX0 data in the file.
+3. 
