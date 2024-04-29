@@ -24,6 +24,10 @@
             border: 1px solid black;
             max-width: 750px;
         }
+        .crash
+        {
+            color:red;
+        }
         .player
         {
             color:blue;
@@ -199,8 +203,8 @@
                 <ul>
                     <li>0x4 causes your party to respawn in the current area.</li>
                     <li>0x6 causes the title sequence to play.</li>
-                    <li>0x9 causes the top screen to corrupt before the game CRASHES. Under normal circumstances, this value changing to 0x9 means you're entering the character customizer.</li>
-                    <li>0xA causes the bottom screen to corrupt before the game CRASHES.</li>
+                    <li>0x9 causes the top screen to corrupt before the game <span class="crash">CRASHES</span>. Under normal circumstances, this value changing to 0x9 means you're entering the character customizer.</li>
+                    <li>0xA causes the bottom screen to corrupt before the game <span class="crash">CRASHES</span>.</li>
                     <li>0xB takes you to the character customizer's "Select character" menu.</li>
                     <li>0xC takes you to the character customizer's "Save character" menu.</li>
                     <li>0x11 takes you to a glitched version of the title screen.</li>
