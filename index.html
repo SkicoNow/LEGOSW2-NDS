@@ -201,18 +201,37 @@
                 <td>u8</td>
                 <td>Current event? Determines which event is currently happening. Here are some values with notable effects:
                 <ul>
-                    <li>0x4 causes your party to respawn in the current area.</li>
-                    <li>0x6 causes the title sequence to play.</li>
-                    <li>0x9 causes the top screen to corrupt before the game <span class="crash">CRASHES</span>. Under normal circumstances, this value changing to 0x9 means you're entering the character customizer.</li>
-                    <li>0xA causes the bottom screen to corrupt before the game <span class="crash">CRASHES</span>.</li>
-                    <li>0xB takes you to the character customizer's "Select character" menu.</li>
-                    <li>0xC takes you to the character customizer's "Save character" menu.</li>
-                    <li>0x11 takes you to a glitched version of the title screen.</li>
-                    <li>0x13 takes you to the "Save Game" menu.</li>
-                    <li>0x1C plays the opening sequence of <i>The Trench Run</i>.</li>
-                    <li>0x1F replaces the top screen with the scrolling star background found on the bottom screen.</li>
-                    <li>0x20 takes you to the "Arena Mode Select" menu.</li>
-                    <li>0x21 takes you to the "Hosting Wireless Game" menu.</li>
+                    <li>0x4: Your party to respawn in the current area.</li>
+                    <li>0x6: Plays the title screen sequence.</li>
+                    <li>0x9: Corrupts the top screen. Results in a <span class="crash">CRASH</span>. Under normal circumstances, this value changing to 0x9 means you're entering the character customizer.</li>
+                    <li>0xA: Corrupts the bottom screen. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0xB: Loads the character customizer's "Select character" menu.</li>
+                    <li>0xC: Loads the character customizer's "Save character" menu.</li>
+                    <li>0x11: Loads a glitched version of the title screen.</li>
+                    <li>0x13: Loads the "Save Game" menu.</li>
+                    <li>0x1C: Plays the opening sequence of <i>The Trench Run</i>.</li>
+                    <li>0x1F: Replaces the top screen with the scrolling star background found on the bottom screen.</li>
+                    <li>0x20: Loads the multiplayer "Arena Mode Select" menu.</li>
+                    <li>0x21: Loads the multiplayer "Hosting Wireless Game" menu.</li>
+                    <li>0x22: Loads the multiplayer "Browsing Wireless Game" menu.</li>
+                    <li>0x23: Loads a multiplayer menu with text saying <code>is trying to connect. Do you want to let them join your game?</code> Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x24: Loads the multiplayer "Hosting Single-Card Game" menu.</li>
+                    <li>0x26: Loads a menu with text saying <code>Press A to Continue.</code></li>
+                    <li>0x27: Loads the multiplayer "Waiting for Host" menu. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x28: Slightly corrupts the bottom screen. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x29: Loads a "Select Character" menu. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x2A: Changes the bottom screen to the screen shown during a multiplayer game.</li>
+                    <li>0x2B: Loads the multiplayer "Scores" menu.</li>
+                    <li>0x2C: The bottom screen "Party Members" text and player icons disappear. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x2E: The top screen goes black and the bottom screen changes to the camera scroll menu.</li>
+                    <li>0x31: Loads the Cantina shop.</li>
+                    <li>0x33: Loads a glitched version of the level results screen. The bottom screen is corrupted while two 4-LOM character icons (one on each screen) continuously move left. Results in a <span class="crash">SOFTLOCK</span>.</li>
+                    <li>0x34: The icons for the camera scroll, party members, and character customization menus disappear. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x35: Loads a glitched version of the pause menu.</li>
+                    <li>0x36: Loads a "Game Settings" menu where the top screen is corrupted. Results in a <span class="crash">CRASH</span>.</li>
+                    <li>0x37: Both screens go black. Seemingly results in a <span class="crash">SOFTLOCK</span>.</li>
+                    <li>0x38: The top screen goes black and the scrolling star background on the bottom screen gets slightly corrupted.</li>
+                    <li>0x39: The top screen gets replaced with the static star background. The character icons on the bottom screen disappear.</li>
                 </ul></td>
             </tr>
             <tr>
