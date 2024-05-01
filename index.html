@@ -163,7 +163,7 @@
             <tr>
                 <td>0xF8</td>
                 <td>u32</td>
-                <td>Pointer to data that is 0x10 ahead of the model's name (i.e. 0x30 ahead of <code>MDL0</code> header). Replacing this with a pointer to a piece of data that is 0x10 ahead of a <i>different</i> model's name is what actually replaces the model.</td>
+                <td>Pointer to data that is 0x10 ahead of the model's name (i.e. 0x30 ahead of <code>MDL0</code> header). Replacing this with a pointer to a piece of data that is 0x10 ahead of a <i>different</i> model's name will replace the model, do nothing, or <span class="crash">CRASH</span> the game.</td>
             </tr>
             <tr>
                 <td>0x104</td>
