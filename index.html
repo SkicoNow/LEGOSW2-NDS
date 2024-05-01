@@ -185,6 +185,32 @@
                 <td>Unknown</td>
                 <td>Animation thing.</td>
             </tr>
+            <tr class="player">
+                <td>0x1A8</td>
+                <td>u8</td>
+                <td>For the character in the Cantina customizer tank:
+                    <ul>
+                        <li>0x0-0x7: Character is visible.</li>
+                        <li>0x8-0xF: Character is invisible.</li>
+                    </ul>
+                    <br>
+                    (this pattern repeats all the way up to 0xFF)
+                </td>
+            </tr>
+            <tr class="player">
+                <td>0x1A9</td>
+                <td>u8</td>
+                <td>For the character in the Cantina customizer tank:
+                    <ul>
+                        <li>0x0-0x3: Character wears no accessories.</li>
+                        <li>0x4-0x7: Character wears a moustache.</li>
+                        <li>0x8-0xB: Character wears sunglasses.</li>
+                        <li>0xC-0xF: Character wears a moustache and sunglasses.</li>
+                    </ul>
+                    <br>
+                    (this pattern repeats all the way up to 0xFF)
+                </td>
+            </tr>
         </tbody>
     </table>
     <h2>Other</h2>
