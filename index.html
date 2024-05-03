@@ -219,7 +219,7 @@
             <tr class="player">
                 <td>0x684</td>
                 <td>s32</td>
-                <td>Only seems to apply to P2, and probably P3 and P4 as well. Related to X position. Only updates when the player jumps or stops walking.</td>
+                <td>Only seems to apply to player 2 (P2), and probably player 3 (P3) and player 4 (P4) as well. Related to X position. Only updates when the player jumps or stops walking.</td>
             </tr>
             <tr class="player">
                 <td>0x688</td>
@@ -234,15 +234,14 @@
             <tr class="player">
                 <td>0x6F8</td>
                 <td>u32</td>
-                <td>This is the first pointer in a collection of pointers to various objects.</td>
+                <td>Pointer to the object that player 1 (P1) is the closest to.</td>
             </tr>
             <tr class="player">
                 <td>0x6FC</td>
                 <td>u32</td>
-                <td>P1's distance to object?
+                <td>P1's distance from that object.
                 <br>
-                <br>
-                This format repeats for the next several addresses. base + 0x700 is a pointer to another object, base + 0x704 is (supposedly) P1's distance to that object, etc.
+                This pattern repeats for however many objects are currently in the level. For example, base + 0x700 is a pointer to the next closest object, base + 0x704 is P1's distance from that object, etc. The pointers and distance values are sorted from closest to farthest in memory. In other words, the first pointer that appears in this section of memory will indicate the object P1 is currently the closest to, and the last pointer will indicate the object P1 is currently the farthest from.   
                 </td>
             </tr>
         </tbody>
