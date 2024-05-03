@@ -231,6 +231,20 @@
                 <td>s32</td>
                 <td>Only seems to apply to P2, and probably P3 and P4 as well. Related to Z position. Only updates when the player jumps or stops walking.</td>
             </tr>
+            <tr class="player">
+                <td>0x6F8</td>
+                <td>u32</td>
+                <td>This is the first pointer in a collection of pointers to various objects.</td>
+            </tr>
+            <tr class="player">
+                <td>0x6FC</td>
+                <td>u32</td>
+                <td>P1's distance to object?
+                <br>
+                <br>
+                This format repeats for the next several addresses. base + 0x700 is a pointer to another object, base + 0x704 is (supposedly) P1's distance to that object, etc.
+                </td>
+            </tr>
         </tbody>
     </table>
     <h2>Other</h2>
